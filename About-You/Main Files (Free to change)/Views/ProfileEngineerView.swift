@@ -105,7 +105,6 @@ class ProfileEngineerView: UIView  {
     @IBAction func profileImageButtonClicked(_ sender: AnyObject?) {
         self.delegate?.hasClickedImage()
     }
-
 }
 
 
