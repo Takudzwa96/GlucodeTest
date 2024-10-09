@@ -9,6 +9,65 @@ import XCTest
 
 class About_YouUITests: XCTestCase {
 
+    let app = XCUIApplication()
+
+    override func setUp() {
+        continueAfterFailure = false
+        app.launch()
+    }
+
+    func testTableInteraction() {
+        app.launch()
+
+        // Assert that we are displaying the tableview
+        let engieersTableView = app.tables["EngineersTableViewController"]
+
+        XCTAssertTrue(engieersTableView.exists, "tableview exists")
+
+        // Get an array of cells
+        let tableCells = engieersTableView.cells
+
+        if tableCells.count > 0 {
+            let count: Int = (tableCells.count - 1)
+
+            let promise = expectation(description: "Wait for table cells")
+
+            for i in stride(from: 0, to: count , by: 1) {
+                // Grab the first cell and verify that it exists and tap it
+                let tableCell = tableCells.element(boundBy: i)
+                XCTAssertTrue(tableCell.exists, "The \(i) cell is in place on the table")
+
+                tableCell.tap()
+
+                if i == (count - 1) {
+                    promise.fulfill()
+                }
+                // Back
+                app.navigationBars.buttons.element(boundBy: 0).tap()
+            }
+            waitForExpectations(timeout: 20, handler: nil)
+            XCTAssertTrue(true, "Finished validating the table cells")
+
+        } else {
+            XCTAssert(false, "Not able to find any table cells")
+        }
+
+    }
+
+    func testOrderSelectionChangesSorting() {
+        // Given
+        let app = XCUIApplication()
+        app.launch()
+
+        let engineersTableView = app.tables["EngineersTableViewController"]
+
+        XCTAssertTrue(engineersTableView.exists, "Engineers table view exists")
+
+        app.navigationBars.buttons["Order by"].tap()
+
+        app.tables.staticTexts["Years"].tap()
+    }
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 

@@ -9,8 +9,9 @@ class GlucodianTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    func setUp(with name: String, role: String) {
-        nameLabel.text = name
-        roleLabel.text = role
+    func setUp(with engineer : Engineer) {
+        nameLabel.text = engineer.name
+        roleLabel.text = engineer.role
+        self.profileImage.image = engineer.profileImage
     }
 }

@@ -3,27 +3,29 @@ import UIKit
 class QuestionCardView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var optionsStackView: UIStackView!
-    var selectedIndex: Int?
-    var currentSelection: SelectableAwnswerView?
+    var selectedIndex: Int? = nil
+    var currentSelection: SelectableAnswerView?
 
     override func awakeFromNib() {
         applyStyling()
     }
 
-    func setUp(with title: String, options: [String], selectedIndex: Int? = -1) {
+    func setUp(with title: String, options: [String], selectedIndex: Int? = nil) {
         titleLabel.text = title
         self.selectedIndex = selectedIndex
         for (index, optionText) in options.enumerated() {
             addOption(with: optionText,
-                      addSeperator: index > options.count - 1,
+                      addSeperator: index != options.count - 1,
                       setSelected: index == selectedIndex)
         }
     }
 
     func ensureCorrectSelectionIsSelected() {
-        guard let index = selectedIndex,
-              let selectionView = optionsStackView.arrangedSubviews[index] as? SelectableAwnswerView else { return }
-        selectionView.applySelectionStyling()
+        if let index = selectedIndex,
+           let selectionView = optionsStackView.arrangedSubviews[index] as? SelectableAnswerView {
+            selectionView.applySelectionStyling()
+            currentSelection = selectionView
+        }
     }
 
     private func applyStyling() {
@@ -35,7 +37,7 @@ class QuestionCardView: UIView {
     }
 
     private func addOption(with text: String, addSeperator: Bool = true, setSelected: Bool) {
-        guard let optionView = SelectableAwnswerView.loadView() else { return }
+        guard let optionView = SelectableAnswerView.loadView() else { return }
         optionView.setUp(with: text, delegate: self)
 
         optionsStackView.addArrangedSubview(optionView)
@@ -45,6 +47,7 @@ class QuestionCardView: UIView {
 
         if setSelected {
             optionView.applySelectionStyling()
+            currentSelection = optionView
         }
     }
 
@@ -64,8 +67,12 @@ class QuestionCardView: UIView {
 }
 
 extension QuestionCardView: SelectionViewDelegate {
-    func didSelect(selectionview: SelectableAwnswerView) {
+    func didSelect(selectionview: SelectableAnswerView) {
         currentSelection?.deselect()
+        selectionview.applySelectionStyling()
         currentSelection = selectionview
+        if let index = optionsStackView.arrangedSubviews.firstIndex(of: selectionview) {
+            selectedIndex = index
+        }
     }
 }

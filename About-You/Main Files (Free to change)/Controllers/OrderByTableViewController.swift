@@ -1,10 +1,16 @@
 import UIKit
 
-class OrderByTableViewController: UITableViewController {
+protocol OrderByTableViewControllerDelegate: AnyObject  {
+    func hasSelectedOrder(order: String)
+}
+
+ class OrderByTableViewController: UITableViewController {
+
+     var delegate : OrderByTableViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,6 +35,13 @@ class OrderByTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            self.delegate?.hasSelectedOrder(order: "years")
+        } else if indexPath.row == 1 {
+            self.delegate?.hasSelectedOrder(order: "Coffees")
+        } else {
+            self.delegate?.hasSelectedOrder(order: "Bugs")
+        }
     }
 
 }

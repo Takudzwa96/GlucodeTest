@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EFAEF6A2CB43AFC00ACB87F /* ProfileEngineerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EFAEF692CB43AFC00ACB87F /* ProfileEngineerView.xib */; };
+		0EFAEF6C2CB4412600ACB87F /* ProfileEngineerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFAEF6B2CB4412600ACB87F /* ProfileEngineerView.swift */; };
+		0EFAEF702CB4488D00ACB87F /* SelectableAnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EFAEF6F2CB4488D00ACB87F /* SelectableAnswerView.xib */; };
 		5D69CD8A26E0A043001DE1A7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D69CD8926E0A043001DE1A7 /* README.md */; };
 		5D736ECE2732FEF200BE2B04 /* UserDefaults+Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D736ECD2732FEF200BE2B04 /* UserDefaults+Extension .swift */; };
 		5D8DA22B26E0104C00418960 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DA22A26E0104C00418960 /* RootViewController.swift */; };
@@ -37,8 +40,7 @@
 		5DD01B4E27046B820032C29A /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD01B4C27046B820032C29A /* QuestionsViewController.swift */; };
 		5DD01B4F27046B820032C29A /* QuestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DD01B4D27046B820032C29A /* QuestionsViewController.xib */; };
 		5DD01B5227046C5B0032C29A /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD01B5127046C5B0032C29A /* QuestionCardView.swift */; };
-		5DD01B5427046C790032C29A /* SelectableAwnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD01B5327046C790032C29A /* SelectableAwnswerView.swift */; };
-		5DD01B5627046CD00032C29A /* SelectableAwnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DD01B5527046CD00032C29A /* SelectableAwnswerView.xib */; };
+		5DD01B5427046C790032C29A /* SelectableAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD01B5327046C790032C29A /* SelectableAnswerView.swift */; };
 		5DD01B5827046CDF0032C29A /* QuestionCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DD01B5727046CDF0032C29A /* QuestionCardView.xib */; };
 		5DD01B5E27049AFA0032C29A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD01B5D27049AFA0032C29A /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EFAEF692CB43AFC00ACB87F /* ProfileEngineerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileEngineerView.xib; sourceTree = "<group>"; };
+		0EFAEF6B2CB4412600ACB87F /* ProfileEngineerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEngineerView.swift; sourceTree = "<group>"; };
+		0EFAEF6F2CB4488D00ACB87F /* SelectableAnswerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectableAnswerView.xib; sourceTree = "<group>"; };
 		5D69CD8926E0A043001DE1A7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		5D736ECD2732FEF200BE2B04 /* UserDefaults+Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension .swift"; sourceTree = "<group>"; };
 		5D8DA22A26E0104C00418960 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -97,8 +102,7 @@
 		5DD01B4C27046B820032C29A /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		5DD01B4D27046B820032C29A /* QuestionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsViewController.xib; sourceTree = "<group>"; };
 		5DD01B5127046C5B0032C29A /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
-		5DD01B5327046C790032C29A /* SelectableAwnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableAwnswerView.swift; sourceTree = "<group>"; };
-		5DD01B5527046CD00032C29A /* SelectableAwnswerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectableAwnswerView.xib; sourceTree = "<group>"; };
+		5DD01B5327046C790032C29A /* SelectableAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableAnswerView.swift; sourceTree = "<group>"; };
 		5DD01B5727046CDF0032C29A /* QuestionCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCardView.xib; sourceTree = "<group>"; };
 		5DD01B5D27049AFA0032C29A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -326,7 +330,8 @@
 			children = (
 				5D93CE282706F0AD00D5059C /* Cells */,
 				5DD01B5127046C5B0032C29A /* QuestionCardView.swift */,
-				5DD01B5327046C790032C29A /* SelectableAwnswerView.swift */,
+				0EFAEF6B2CB4412600ACB87F /* ProfileEngineerView.swift */,
+				5DD01B5327046C790032C29A /* SelectableAnswerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,10 +339,11 @@
 		5DD01B622704BBF30032C29A /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				0EFAEF6F2CB4488D00ACB87F /* SelectableAnswerView.xib */,
 				5D93CE2A2706F0DB00D5059C /* GlucodianTableViewCell.xib */,
 				5DD01B4D27046B820032C29A /* QuestionsViewController.xib */,
 				5DD01B5727046CDF0032C29A /* QuestionCardView.xib */,
-				5DD01B5527046CD00032C29A /* SelectableAwnswerView.xib */,
+				0EFAEF692CB43AFC00ACB87F /* ProfileEngineerView.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -445,8 +451,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EFAEF6A2CB43AFC00ACB87F /* ProfileEngineerView.xib in Resources */,
 				5D93CE32270B08C900D5059C /* Standard.png in Resources */,
-				5DD01B5627046CD00032C29A /* SelectableAwnswerView.xib in Resources */,
 				5DAF4631270C3C820051DEAB /* Bug 4.mov in Resources */,
 				5D8DA23326E011B500418960 /* IntroductionViewController.xib in Resources */,
 				5D93CE40270C157A00D5059C /* Bug 3.png in Resources */,
@@ -461,6 +467,7 @@
 				5D93CE47270C214000D5059C /* Finished Implementation.mov in Resources */,
 				5D93CE3C270C11F000D5059C /* Bug 1 & 2.png in Resources */,
 				5D90F2E626DB774700EFA4A8 /* Assets.xcassets in Resources */,
+				0EFAEF702CB4488D00ACB87F /* SelectableAnswerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,9 +505,10 @@
 				5D90F2DC26DB774400EFA4A8 /* SceneDelegate.swift in Sources */,
 				5D8DA23B26E0182B00418960 /* Question.swift in Sources */,
 				5D8DA23226E011B500418960 /* IntroductionViewController.swift in Sources */,
+				0EFAEF6C2CB4412600ACB87F /* ProfileEngineerView.swift in Sources */,
 				5D93CE212705F3EA00D5059C /* EngineersTableViewController.swift in Sources */,
 				5D93CE232705F5B000D5059C /* Engineer.swift in Sources */,
-				5DD01B5427046C790032C29A /* SelectableAwnswerView.swift in Sources */,
+				5DD01B5427046C790032C29A /* SelectableAnswerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

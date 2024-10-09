@@ -1,10 +1,10 @@
 import UIKit
 
 protocol SelectionViewDelegate {
-    func didSelect(selectionview: SelectableAwnswerView)
+    func didSelect(selectionview: SelectableAnswerView)
 }
 
-class SelectableAwnswerView: UIView {
+class SelectableAnswerView: UIView {
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak var highlightView: UIView!
 

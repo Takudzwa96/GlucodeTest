@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,10 +15,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6jD-5a-Fds">
-                    <rect key="frame" x="15" y="94.5" width="384" height="757.5"/>
+                    <rect key="frame" x="15" y="98.5" width="384" height="753.5"/>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVy-7m-CDu">
-                    <rect key="frame" x="15" y="64" width="41.5" height="20.5"/>
+                    <rect key="frame" x="15" y="68" width="383" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -33,6 +33,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6jD-5a-Fds" secondAttribute="bottom" constant="10" id="duE-z4-LSH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6jD-5a-Fds" secondAttribute="trailing" constant="15" id="qj2-eR-8ZN"/>
                 <constraint firstItem="aVy-7m-CDu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="vdb-b0-Z6C"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aVy-7m-CDu" secondAttribute="trailing" constant="16" id="wox-Y4-FOA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

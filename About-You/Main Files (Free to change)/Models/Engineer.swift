@@ -1,11 +1,16 @@
 import UIKit
 
-struct Engineer {
+struct Engineer : Equatable {
     var name: String
     var role: String
     var defualtImageName: String
     var quickStats: QuickStats
     var questions: [Question]
+    var profileImage = UIImage(named: "icon_profile")
+
+    static func == (lhs: Engineer, rhs: Engineer) -> Bool {
+        lhs.name == rhs.name
+    }
 }
 
 struct QuickStats {
